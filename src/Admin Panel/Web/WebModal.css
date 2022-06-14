@@ -1,0 +1,142 @@
+.ModalWeb {
+   position: absolute;
+}
+.wrapperModal {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   padding: 1rem;
+   background-color: rgb(0, 0, 0, 0.5);
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+}
+.modalX {
+   margin-left: 200px;
+}
+.Modal_navbar {
+   width: 100%;
+   height: 20%;
+   position: relative;
+}
+
+.btn-closeIcon {
+   position: absolute;
+   right: 5px;
+   top: -5px;
+   color: #b9b9b9;
+   width: 30px;
+}
+.Modal_h1 {
+   color: #009398;
+   margin-left: 320px;
+   margin-top: 20px;
+}
+
+.Modal_Content {
+   margin-top: 10px;
+   height: 70%;
+   text-align: center;
+}
+.ModalInput {
+   margin-top: 100px;
+   width: 60%;
+   height: 4%;
+   border: none;
+   outline: none;
+   font-size: 20px;
+   border-bottom: 1px solid black;
+}
+form {
+   position: relative;
+}
+.ModalP {
+   position: absolute;
+   left: 20%;
+   top: 70px;
+   font-size: 18px;
+}
+.ModalBtn {
+   width: 220px;
+   height: 45px;
+   margin-top: 20px;
+   border-radius: 20px;
+   border: none;
+   color: white;
+   background-color: #009398;
+   text-transform: uppercase;
+   display: block;
+   margin-left: 35%;
+}
+.ModalBtn:hover {
+   background-color: #30afb4;
+}
+.Modal_h1_2 {
+   color: #009398;
+   margin-left: 390px;
+   margin-top: 20px;
+}
+.Modal_2_form {
+   display: flex;
+   justify-content: space-around;
+}
+.ModalLabel2 {
+   height: 170px;
+}
+.Modal_2Input {
+   display: block;
+   margin-top: 10px;
+   width: 200%;
+   height: 40px;
+   border: none;
+   outline: none;
+   border-bottom: 1px solid black;
+   margin-right: 35px;
+   position: relative;
+   font-size: 13px;
+   text-align: left;
+
+}
+.ModalP1 {
+   margin-top: 70px;
+   font-size: 18px;
+   text-align: left;
+
+}
+.ModalP2 {
+   margin-top: 70px;
+   font-size: 18px;
+   text-align: left;
+}
+.ModalBtn-2 {
+   width: 220px;
+   height: 45px;
+   margin-top: 10px;
+   border-radius: 20px;
+   border: none;
+   color: white;
+   background-color: #009398;
+   text-transform: uppercase;
+   margin-left: 330px;
+}
+.ModalBtn-2:hover {
+   background-color: #30afb4;
+}
+.Modal_h1_3 {
+   margin-left: 330px;
+   color: #009398;
+   margin-top: 30px;
+}
+.Modal_h1_4 {
+   margin-left: 355px;
+   color: #009398;
+   margin-top: 30px;
+}
+
+.Modal_h1_5 {
+   margin-left: 365px;
+   color: #009398;
+   margin-top: 20px;
+}

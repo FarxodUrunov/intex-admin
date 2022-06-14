@@ -1,0 +1,63 @@
+.wrapperWeb{
+    width: 100%;
+    background: #fff;
+}
+.WebContent{
+    width: 100%;
+    display: flex;
+}
+.Webmenus{
+    width: 20%;
+}
+.WebMainContent{
+    width: 80%;
+}
+
+.containerWeb{
+    width: 100%; 
+    background:#F8F8F8;
+}
+.containerWeb .main-content-web{
+    width: 100%;  
+    padding: 1rem;
+}
+.main-content-web .ul-body{
+    width: 100%;
+    list-style: none;
+    background:#fff;
+    display: flex;
+    align-items:center;
+    padding:0.8rem 1.5rem;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+.main-content-web .ul-body li{
+    font-weight: 600;
+    text-align: left;
+}
+.main-content-web .ul-body li:first-child{
+    width: 25%;
+}
+.main-content-web .ul-body li:nth-child(2){
+    width: 60%;
+}
+.main-content-web .ul-body li:last-child{
+    width: 15%;    
+    text-align: right;
+}
+.edit-icons button{
+    margin: 0;
+    cursor: pointer;
+    border:none;
+    border-radius:50%;
+    padding: 1rem;
+    background-color: transparent;
+    font-size: 18px;
+    opacity: 0.5;
+}
+.edit-icons #edit-btn{
+    color:#3F8C8E;
+}
+.edit-icons button:hover{
+    opacity: 1;
+}

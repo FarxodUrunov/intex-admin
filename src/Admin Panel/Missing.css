@@ -1,0 +1,18 @@
+.missingh1{
+    font-size: 36px;
+    text-align: center;
+    margin: 10px 0;
+}
+.missingp{
+    font-size: 28px;
+    text-align: center;
+    color:red;
+    margin: 10px 0;
+}
+.flexGrow{
+    text-align: center;
+}
+.flexGrow .link{
+    text-decoration: none;
+    color:#0508bd;
+}

@@ -1,0 +1,89 @@
+.c-add{
+    width: 50%;
+    /* border:1px solid; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 2rem 1rem 0rem;
+}
+.c-add button{
+    width: 45%;
+    height: 100%;
+    background:#009398;
+    border:none;
+    border-radius: 30px;
+    padding: 1.2rem;
+    color:#fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 200;
+    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+.c-add button:hover{
+    opacity: 0.9;
+}
+/*  */
+
+.c-add {
+    text-align: center;
+    padding-top: 2rem;
+  }
+  .Modal_navbar{
+    position: relative;
+    /* border: 1px solid; */
+  }
+  .Modal_navbar h2{
+    color:  #009398;
+    text-align: center;
+  }
+  .Modal_navbar i{
+    position: absolute;
+    right: 10px;
+    top: 10px; 
+    color: gray;
+    opacity: 0.5;
+    cursor:pointer;
+  }
+  .Modal_navbar i:hover{
+    opacity: 1;
+  }
+  .ModalForm{
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
+  .ModalForm input{
+    width: 40%;
+    padding: 1rem;
+    border:none;
+    outline:none;
+    border-bottom:1px solid;
+    margin:20px;
+    text-align: center;
+  }
+  .ModalForm input:focus{
+    border:1px solid;
+    border-radius:10px;
+  }
+
+  .CategoryBtn{
+    width: 30%;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background-color:  #009398;
+    text-transform: uppercase;
+    }
+    
+
+    @media  only  screen and  (max-width:320px) {
+      /* /////Iphone SE */
+  
+    .Category_Modal{
+          background-color: red;
+    }
+
+  }
+    

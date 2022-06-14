@@ -1,0 +1,121 @@
+.wrapperCategory{
+    width: 100%;
+    background: #fff;
+}
+.CategoryContent{
+    width: 100%;
+    display: flex;
+}
+.Categorymenus{
+    width: 20%;
+}
+.CategoryMainContent{
+    width: 80%;
+}
+
+
+.containerCategory{
+    width: 100%; 
+    background:#F8F8F8;
+}
+.containerCategory .btn-bar{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+.containerCategory .main-content{
+    width: 100%;
+    padding: 1rem;
+}
+.containerCategory .main-content-category{
+    width: 100%;  
+}
+.main-content-category .ul-head{
+    width: 100%;
+    list-style: none;
+    background:#fff;
+    display: flex;
+    align-items:center;
+    padding:1.5rem;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+.main-content-category .ul-head li{
+    width: 33%;
+    font-weight: 600;
+    text-align: center;
+}
+.main-content-category .ul-head li:first-child{
+    text-align: left;
+}
+.main-content-category .ul-head li:last-child{
+    text-align: right;
+}
+.main-content-category .ul-body{
+    width: 100%;
+    list-style: none;
+    background:#fff;
+    display: flex;
+    align-items:center;
+    padding:0.8rem 1.5rem;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+.main-content-category .ul-body li{
+    width: 33%;
+    font-weight: 600;
+    text-align: center;
+}
+.main-content-category .ul-body li:first-child{
+    text-align: left;
+}
+.main-content-category .ul-body li:last-child{
+    text-align: right;
+}
+.edit-icons button{
+    margin: 0;
+    cursor: pointer;
+    border:none;
+    border-radius:50%;
+    padding: 1rem;
+    background-color: transparent;
+    font-size: 18px;
+    opacity: 0.5;
+}
+.edit-icons #edit-btn{
+    color:#3F8C8E;
+}
+.edit-icons #delete-btn{
+    color: red;
+}
+.edit-icons button:hover{
+    opacity: 1;
+}
+
+.Modal_navbar{
+    position: relative;
+    /* border: 1px solid; */
+	text-align: center;
+  }
+  .Modal_navbar h2{
+    color:  #009398;
+    text-align: center;
+	margin: 0;
+	font-size: 38px;
+  }
+  .Modal_navbar button{
+	width: 25%;
+	border:none;
+	border-radius:10px;
+	color:white;
+	padding:0.8rem;
+	margin: 25px;
+	cursor: pointer;
+  }
+  .Modal_navbar #yes_btn{
+	  background:red;	  
+  }
+  .Modal_navbar #no_btn{
+	background:green;
+}
