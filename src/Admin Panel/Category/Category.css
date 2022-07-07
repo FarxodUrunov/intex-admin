@@ -6,16 +6,14 @@
     width: 100%;
     display: flex;
 }
-.Categorymenus{
-    width: 20%;
-}
 .CategoryMainContent{
-    width: 80%;
+    width: 100%;
 }
 
 
 .containerCategory{
     width: 100%; 
+	height: 100vh;
     background:#F8F8F8;
 }
 .containerCategory .btn-bar{

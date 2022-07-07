@@ -1,5 +1,3 @@
-import { type } from "@testing-library/user-event/dist/type";
-
 export const AddCategory = (state = { data: [], info: [], product: [] }, action) => {
    if (action.type === "ADD_CATEGORY") {
       return {
@@ -14,7 +12,7 @@ export const AddCategory = (state = { data: [], info: [], product: [] }, action)
    } else if (action.type === "DELETE_CATEGORY") {
       return {
          ...state,
-         data: state.data.filter((item) => item.id != action.payload),
+         data: state.data.filter((item) => item.id !== action.payload),
       };
    } else if (action.type === "EDIT_CATEGORY") {
       return {
@@ -29,7 +27,7 @@ export const AddCategory = (state = { data: [], info: [], product: [] }, action)
    } else if (action.type === "WEB_DATA") {
       return {
          ...state,
-         info: action.info,
+         info: action.info[0],
       };
    } else if (action.type === "EDIT_WEB_DATA") {
       return {
@@ -49,7 +47,7 @@ export const AddCategory = (state = { data: [], info: [], product: [] }, action)
    } else if (action.type === "PRODUCT_DATA_DELETE") {
       return {
          ...state,
-         product: state.product.filter((item) => item.id != action.payload),
+         product: state.product.filter((item) => item.id !== action.payload),
       };
    } else if (action.type === "PRODUCT_DATA_PUT") {
       return {
@@ -69,7 +67,7 @@ export const AddCategory = (state = { data: [], info: [], product: [] }, action)
    } else if (action.type === "ZAKAZ_DATA_DELETE") {
       return {
          ...state,
-         zakaz: state.zakaz.filter((item) => item.id != action.payload),
+         zakaz: state.zakaz.filter((item) => item.id !== action.payload),
       };
    } else if (action.type === "ZAKAZ_DATA_PATCH") {
       return {
@@ -89,7 +87,7 @@ export const AddCategory = (state = { data: [], info: [], product: [] }, action)
    } else if (action.type === "KONSUL_DATA_DELETE") {
       return {
          ...state,
-         konsul: state.konsul.filter((item) => item.id != action.payload),
+         konsul: state.konsul.filter((item) => item.id !== action.payload),
       };
    } else if (action.type === "KONSUL_DATA_PATCH") {
       return {
@@ -100,6 +98,11 @@ export const AddCategory = (state = { data: [], info: [], product: [] }, action)
             }
             return item;
          }),
+      };
+   } else if (action.type === "SEARCH_DATA") {
+      return {
+         ...state,
+         value: action.value,
       };
    }
 

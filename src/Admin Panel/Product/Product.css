@@ -6,15 +6,14 @@
     width: 100%;
     display: flex;
 }
-.Productmenus{
-    width: 20%;
-}
+
 .ProductMainContent{
-    width: 80%;
+    width: 100%;
 }
 
 .containerProduct{
-    width: 100%; 
+    width: 100%;
+	height: 100vh; 
     background:#F8F8F8;
 }
 .containerProduct .search-and-btn{

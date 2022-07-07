@@ -1,20 +1,16 @@
-.wrapperOrder {
-   width: 100%;
-   background: #fff;
-}
+
 .OrderContent {
    width: 100%;
    display: flex;
 }
-.Ordermenus {
-   width: 20%;
-}
+
 .OrderMainContent {
-   width: 80%;
+   width: 100%;
 }
 
 .containerOrder {
    width: 100%;
+   height: 100%;
    background: #f8f8f8;
 }
 .search__btn {

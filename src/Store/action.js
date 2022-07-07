@@ -98,4 +98,10 @@ export const konsul_data_get = (konsul) => {
 	   isActiv,
 	};
  };
+ export const search_data = (value) => {
+	return {
+	   type: "SEARCH_DATA",
+	   value,
+	};
+ };
 // console.log(add_category())

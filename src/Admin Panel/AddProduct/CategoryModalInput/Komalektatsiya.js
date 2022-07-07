@@ -9,7 +9,6 @@ import Checkbox from "@mui/material/Checkbox";
 import "../../AddProduct/ProductAdd.css";
 import Box from "@mui/material/Box";
 import Chip from "@mui/material/Chip";
-import { color } from "@mui/system";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;

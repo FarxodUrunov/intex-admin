@@ -1,12 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { styled } from "@mui/material/styles";
 import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import NativeSelect from "@mui/material/NativeSelect";
 import InputBase from "@mui/material/InputBase";
-import { BiRegistered } from "react-icons/bi";
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
    "label + &": {
@@ -48,7 +44,7 @@ const Glubina = ({ className, name, onBlur, onChange, value }) => {
          <div>
             <FormControl sx={{ m: 1 }} variant="outlined">
                <InputLabel style={{ color: `${(isDirty && isEmpty) || numberError ? "red" : ""}` }} htmlFor="demo-customized-textbox">
-                  Глубина (уз)
+                  Глубина (sm)
                </InputLabel>
                <BootstrapInput
                   style={{ borderBottom: `${(isDirty && isEmpty) || numberError ? "1px solid red" : ""}` }}

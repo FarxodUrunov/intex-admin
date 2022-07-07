@@ -1,10 +1,7 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
 import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import NativeSelect from "@mui/material/NativeSelect";
 import InputBase from "@mui/material/InputBase";
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
@@ -35,7 +32,7 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
          borderBottom: "2px solid rgba(0,123,255,.25)",
       },
       "&:hover": {
-         borderBottom: "2px solid black",
+        //  borderBottom: "2px solid black",
       },
    },
 }));

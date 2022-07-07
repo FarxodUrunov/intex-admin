@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-import axios from "../../api/axios";
 import { useDispatch } from "react-redux";
 import { add_category_one } from "../../Store/action";
-import { Navigate } from "react-router-dom";
 import axiosInstance from "../../api/axiosInstance";
 // styling
 import "./CategoryAdd.css";
@@ -21,33 +19,23 @@ const CategoryAdd = () => {
 
    const handleSubmit = async (e) => {
       e.preventDefault();
-    //   console.log(e);
       const token = JSON.parse(window.localStorage.getItem("AuthToken")).access;
       const config = {
          headers: { Authorization: `Bearer ${token}` },
       };
-      const tokenGet = JSON.parse(window.localStorage.getItem("AuthToken")).access;
       axiosInstance
-		  .post(CATEGORY_URL,
-			//   { c_name: name, name_uz: nameUz, name_ru: nameRu },
-			  { categoryname: name, category_uz: nameUz, category_ru: nameRu },
-			  config)
+         .post(CATEGORY_URL, { categoryname: name, category_uz: nameUz, category_ru: nameRu }, config)
          .then(function (response) {
             // console.log(response);
-			 dispatch(add_category_one(
-				//  { id: response.data.id, c_name: name, name_uz: nameUz, name_ru: nameRu }
-				 { id: response.data.id, categoryname: name, category_uz: nameUz, category_ru: nameRu }
-			 
-			 ));
-            // <Navigate to="/category" />;
+            dispatch(add_category_one({ id: response.data.id, categoryname: name, category_uz: nameUz, category_ru: nameRu }));
          })
          .catch(function (error) {
-            // console.log(error);
+            console.log(error);
          });
 
       setCategory(false);
    };
-	
+
    return (
       <div className="c-add">
          <button onClick={() => setCategory(true)}>+ Добавить категории</button>
@@ -82,7 +70,7 @@ const CategoryAdd = () => {
                   boxShadow: "-1px 6px 8px 0px rgba(34, 60, 80, 0.2)",
                   display: "flex",
                   justifyContent: "center",
-                //   alignItems: "center",
+                  //   alignItems: "center",
                },
             }}
          >

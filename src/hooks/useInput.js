@@ -23,7 +23,7 @@ const useValidation = (value, validations) => {
                re.test(+value) ? setNumberError(false) : setNumberError(true);
                break;
             case "isText":
-               const reText = /^[a-z]/i;
+               const reText = /^[а-яА-Яa-zA-Z]/i;
                reText.test(String(value).toLowerCase()) ? setTextError(false) : setTextError(true);
                break;
          }

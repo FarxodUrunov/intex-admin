@@ -1,6 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { memo,useState } from "react";
+import { BiCategory } from "react-icons/bi";
+import { AiOutlineDollarCircle } from "react-icons/ai";
+import { FaExpandArrowsAlt } from "react-icons/fa";
+import { GiResize } from "react-icons/gi";
+import { ImListNumbered } from "react-icons/im";
+import { useForm, Controller } from "react-hook-form";
+import { useDispatch} from "react-redux";
 import Modal from "react-modal";
-//  import {Box, TextField, MenuItem} from '@mui/material'
+
+// Store
+import {product_data_post } from "../../Store/action";
+
+// Function
+import { useInput } from "../../hooks/useInput";
+
+// Components
 import SelectVariants from "./CategoryModalInput/MUIcategory";
 import RamkaNaRu from "./CategoryModalInput/RamakNaRu";
 import Razmer from "./CategoryModalInput/Razmer";
@@ -13,27 +27,17 @@ import Glubina from "./CategoryModalInput/Glubina";
 import RecommendUz from "./CategoryModalInput/RecomendUz";
 import Komalektatsiya from "./CategoryModalInput/Komalektatsiya";
 import KomalektatsiyaUz from "./CategoryModalInput/KomalekatsiyaUz";
-import { BiCategory } from "react-icons/bi";
-import { AiOutlineDollarCircle } from "react-icons/ai";
-import { FaExpandArrowsAlt } from "react-icons/fa";
-import { GiResize } from "react-icons/gi";
-import { ImListNumbered } from "react-icons/im";
-import { useForm, Controller } from "react-hook-form";
-import axiosInstance from "../../api/axiosInstance";
-
-import { useInput } from "../../hooks/useInput";
 
 //styling
 import "./ProductAdd.css";
-import { useDispatch, useSelector } from "react-redux";
-import { product_data, product_data_post } from "../../Store/action";
+
+
 const ProductAdd = () => {
-   const [product, setProduct] = useState(false);
+	const dispatch = useDispatch();
+	const [product, setProduct] = useState(false);
 
    const {
-      //   register,
       handleSubmit,
-      watch,
       control,
       reset,
       formState: { errors },
@@ -52,13 +56,11 @@ const ProductAdd = () => {
          Komalektatsiya: [],
          KomalektatsiyaUz: [],
          images: null,
-         //  name: "Jasur",
       },
    });
 
    const [baseImage, setBaseImage] = useState("");
    const [fileImg, setFileImg] = useState("");
-
    const [isImg, setIsImg] = useState(false);
 
    const uploadImage = async (e) => {
@@ -66,10 +68,8 @@ const ProductAdd = () => {
       setFileImg(file);
       const base64 = await convertBase64(file);
       setBaseImage(base64);
-      //   console.log(file);
       setIsImg(true);
    };
-   //    console.log(fileImg);
    const convertBase64 = (file) => {
       return new Promise((resolve, reject) => {
          const fileReader = new FileReader();
@@ -144,26 +144,7 @@ const ProductAdd = () => {
    };
 
    //  men yozganim
-   const dispatch = useDispatch();
-   const tokenGet = JSON.parse(window.localStorage.getItem("AuthToken")).access;
-   const state = useSelector((state) => state);
-
-   useEffect(() => {
-      axiosInstance
-         .get(`${PRODUCT_URL}`, {
-            headers: {
-               Authorization: `Bearer ${tokenGet}`,
-            },
-         })
-         .then((res) => {
-            dispatch(product_data(res.data));
-            // console.log("resdata", res.data);
-         })
-         .catch((error) => {
-            //  console.error(error);
-         });
-   }, []);
-
+	
    const kolichestva = useInput("", { isEmpty: true, isNumber: true });
    const starayaSena = useInput("", { isEmpty: true, isNumber: true });
    const senaSkidkoy = useInput("", { isEmpty: true, isNumber: true });
@@ -321,4 +302,4 @@ const ProductAdd = () => {
    );
 };
 
-export default ProductAdd;
+export default memo(ProductAdd);
